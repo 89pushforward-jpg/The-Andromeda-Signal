@@ -74,11 +74,15 @@
     padding:54px 24px 70px;
     overflow:hidden;
   }
-  /* hero photo background */
+  /* hero photo background (desktop / wide) */
   .hero::before{
     content:"";position:absolute;inset:0;z-index:0;
     background:url('hero.jpg') center 30% / cover no-repeat;
     transform:scale(1.02);
+  }
+  /* vertical hero for phones */
+  @media (max-width:760px){
+    .hero::before{background:url('hero-mobile.jpg') center center / cover no-repeat}
   }
   /* legibility scrim: darker top + bottom, lets the city/planet breathe in the middle */
   .hero::after{
